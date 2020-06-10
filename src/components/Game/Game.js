@@ -11,7 +11,7 @@ const Game = () => {
     const correctArrowPressed = useKeyCode(currentArrow);
 
     if (correctArrowPressed) {
-        const newArrow = selectRandomArrow();
+        const newArrow = selectRandomArrow(currentArrow);
         updateArrow(newArrow);
         dispatch(setScore());
     }
