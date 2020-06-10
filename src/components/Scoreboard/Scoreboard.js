@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Scoreboard.scss';
+import { useSelector } from 'react-redux'
 
-export default class Scoreboard extends Component {
-    constructor() {
-        super()
-        this.state = {};
-    }
+const Scoreboard = () => {
+    const score = useSelector(state => state.score)
 
-    render() {
-        return (
-            <section className="scoreboard">
-            </section>
-        )
-    };
-}
+    return (
+        <section className="scoreboard">
+            <h1>{score}</h1> 
+        </section>
+    )
+};
 
+export default Scoreboard;

@@ -1,15 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Game.scss';
 import arrow from "../../assets/arrow.svg";
+import { useKeyPress } from "../../helpers/helpers";
+import { useDispatch } from 'react-redux';
+import { setScore } from '../../actions';
 
-export default class Game extends Component {
-    constructor() {
-        super()
-        this.state = {};
+const Game = () => {
+    const dispatch = useDispatch()
+    const leftKey = useKeyPress('ArrowLeft');
+
+    if(leftKey) {
+        dispatch(setScore(2))
     }
 
-    render() {
-        return (
+    return (
             <section className="game">
                 <img 
                     src={arrow}
@@ -18,6 +22,6 @@ export default class Game extends Component {
                 />
             </section>
         )
-    };
-}
+};
 
+export default Game;
