@@ -9,7 +9,7 @@ export default class Scoreboard extends Component {
 
     render() {
         return (
-            <section className="Scoreboard">
+            <section className="scoreboard">
             </section>
         )
     };
