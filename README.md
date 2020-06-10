@@ -1,4 +1,4 @@
-# Fidget 
+# Sequence : A Fidget Game 
 If you’re anything like me you might have a hyperactive mind. I find my mind stays more engaged when I perform simple mechanical tasks in the background while I’m  watching talks, listening to podcasts or doing anything that doesn't require my full attention.
 
 Fidget is designed to key into that, it displays a direction, and you simply push the corresponding arrow key. It tracks your score and allows you to stay honed in on whatever you're learning about. 
