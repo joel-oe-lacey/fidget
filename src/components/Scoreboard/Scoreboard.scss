@@ -13,7 +13,9 @@
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    border-top: 1px solid black;
+    border-top: 1px solid #0D1821;
+    background-color: #6F8AB7;
+    color: #CAE5FF;
 }
 
 .title {
@@ -35,4 +37,23 @@
     width: 40%;
     font-size: 1.6rem;
     @include flexCenter();
+}
+
+//score options 
+.twenty {
+    color: teal;
+    font-size: 1.7rem;
+    transition: 800ms;
+}
+
+.fourty {
+    color: forestgreen;
+    font-size: 1.8rem;
+    transition: 800ms;
+}
+
+.sixty {
+    color: black;
+    font-size: 1.8rem;
+    transition: 800ms;   
 }

@@ -28,3 +28,16 @@ export const selectRandomArrow = (currentArrow) => {
     const randIndex = Math.floor(Math.random() * 3);
     return arrows[randIndex];
 }
+
+export const setScoreClass = (score) => {
+    switch (score) {
+        case score >= 20:
+            return 'twenty';
+        case score >= 40:
+            return 'fourty';
+        case score >= 60:
+            return 'sixty';
+        default:
+            return '';
+    }
+}
