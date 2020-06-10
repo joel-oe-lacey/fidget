@@ -1,33 +1,27 @@
 import { useState, useEffect } from 'react';
 
-export const useKeyPress = (targetKey) => {
-    // State for keeping track of whether key is pressed
-    const [keyPressed, setKeyPressed] = useState(false);
-
-    // If pressed key is our target key then set to true
-    function downHandler({ key }) {
-        if (key === targetKey) {
-            setKeyPressed(true);
-        }
+export const useKeyCode = (targetKey) => {
+    const [isKeyPressed, setKeyPressed] = useState();
+    // Only allow fetching each keypress event once to prevent infinite loops
+    if (isKeyPressed) {
+        setKeyPressed(false);
     }
 
-    // If released key is our target key then set to false
-    const upHandler = ({ key }) => {
-        if (key === targetKey) {
-            setKeyPressed(false);
-        }
-    };
-
-    // Add event listeners
     useEffect(() => {
+        function downHandler({ key }) {
+            if (key === targetKey) {
+                setKeyPressed(true);
+            }
+        }
         window.addEventListener('keydown', downHandler);
-        window.addEventListener('keyup', upHandler);
-        // Remove event listeners on cleanup
-        return () => {
-            window.removeEventListener('keydown', downHandler);
-            window.removeEventListener('keyup', upHandler);
-        };
-    }, []); // Empty array ensures that effect is only run on mount and unmount
+        return () => window.removeEventListener('keydown', downHandler);
+    }, [targetKey]);
 
-    return keyPressed;
+    return isKeyPressed;
+}
+
+export const selectRandomArrow = () => {
+    const randIndex = Math.floor(Math.random() * 4);
+    const arrows = ['ArrowLeft', 'ArrowUp', 'ArrowRight', 'ArrowDown'];
+    return arrows[randIndex];
 }
