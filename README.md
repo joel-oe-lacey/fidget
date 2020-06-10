@@ -5,7 +5,7 @@ Fidget is designed to key into that, it displays a direction, and you simply pus
 
 View the live page here: https://joel-oe-lacey.github.io/fidget/
 
-![Screenshot](./public/screen.png)
+![Screenshot](./src/assets/screen.png)
 
 ## Development
 This project is React based, it is set up with Redux for global state management to allow for future extension. Keystroke detection and dynamic display are achieved through React Hooks.
