@@ -1,23 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Game.scss';
 import arrow from "../../assets/arrow.svg";
-import { useKeyPress } from "../../helpers/helpers";
+import { useKeyCode, selectRandomArrow } from "../../helpers/helpers";
 import { useDispatch } from 'react-redux';
 import { setScore } from '../../actions';
 
 const Game = () => {
     const dispatch = useDispatch()
-    const leftKey = useKeyPress('ArrowLeft');
+    const [currentArrow, updateArrow] = useState("ArrowDown");
+    const correctArrowPressed = useKeyCode(currentArrow);
 
-    if(leftKey) {
-        dispatch(setScore(2))
+    if (correctArrowPressed) {
+        const newArrow = selectRandomArrow(currentArrow);
+        updateArrow(newArrow);
+        dispatch(setScore());
     }
 
     return (
             <section className="game">
                 <img 
                     src={arrow}
-                    className="game-arrow" 
+                    className={`game-arrow ${currentArrow}`}
                     alt="Directional arrow"
                 />
             </section>

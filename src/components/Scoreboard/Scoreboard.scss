@@ -1,9 +1,68 @@
-.scoreboard {
-    height: 20%;
-    width: 100%;
+@mixin flexCenter() {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-top: 1px solid black;
+}
+
+.scoreboard {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid #0D1821;
+    background-color: #6F8AB7;
+    color: #CAE5FF;
+}
+
+.title {
+    height: 40%;
+    width: 100%;
+    font-size: 2.3rem;
+    @include flexCenter();
+}
+
+.instruction {
+    height: 60%;
+    width: 60%;
+    font-size: 1.6rem;
+    @include flexCenter();
+}
+
+.score {
+    height: 60%;
+    width: 40%;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+    justify-content: space-evenly;
+}
+
+//score options 
+.ten {
+    color: #ADD8FF;
+    font-size: 2rem;
+    transition: 400ms;
+}
+
+.twentyfive {
+    color: #70BAFF;
+    font-size: 2.2rem;
+    transition: 400ms;
+}
+
+.fifty {
+    color: #339CFF;
+    font-size: 2.5rem;
+    transition: 400ms;
+}
+
+.hundred {
+    color: #0074E0;
+    font-size: 2.7rem;
+    transition: 400ms;
 }
