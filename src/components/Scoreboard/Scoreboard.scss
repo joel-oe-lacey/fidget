@@ -36,24 +36,33 @@
     height: 60%;
     width: 40%;
     font-size: 1.6rem;
-    @include flexCenter();
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+    justify-content: space-evenly;
 }
 
 //score options 
-.twenty {
-    color: teal;
-    font-size: 1.7rem;
-    transition: 800ms;
+.ten {
+    color: #ADD8FF;
+    font-size: 2rem;
+    transition: 400ms;
 }
 
-.fourty {
-    color: forestgreen;
-    font-size: 1.8rem;
-    transition: 800ms;
+.twentyfive {
+    color: #70BAFF;
+    font-size: 2.2rem;
+    transition: 400ms;
 }
 
-.sixty {
-    color: black;
-    font-size: 1.8rem;
-    transition: 800ms;   
+.fifty {
+    color: #339CFF;
+    font-size: 2.5rem;
+    transition: 400ms;
+}
+
+.hundred {
+    color: #0074E0;
+    font-size: 2.7rem;
+    transition: 400ms;
 }

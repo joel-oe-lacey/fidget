@@ -30,13 +30,15 @@ export const selectRandomArrow = (currentArrow) => {
 }
 
 export const setScoreClass = (score) => {
-    switch (score) {
-        case score >= 20:
-            return 'twenty';
-        case score >= 40:
-            return 'fourty';
-        case score >= 60:
-            return 'sixty';
+    switch (true) {
+        case (score >= 100):
+            return 'hundred';
+        case (score >= 50):
+            return 'fifty';
+        case (score >= 25):
+            return 'twentyfive';
+        case (score >= 10):
+            return 'ten';
         default:
             return '';
     }
