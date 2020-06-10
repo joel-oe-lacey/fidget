@@ -1,4 +1,3 @@
-export const setScore = (score) => ({
-    type: 'SET_SCORE',
-    score
+export const setScore = () => ({
+    type: 'SET_SCORE'
 });
