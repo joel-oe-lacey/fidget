@@ -12,3 +12,19 @@
     width: 40%;
     object-fit: contain;
 }
+
+.ArrowLeft {
+    transform: rotate(90deg);
+}
+
+.ArrowUp {
+    transform: rotate(180deg);    
+}
+
+.ArrowRight {
+    transform: rotate(270deg);    
+}
+
+.ArrowDown {
+    transform: rotate(0deg);    
+}
