@@ -7,7 +7,9 @@ const Scoreboard = () => {
 
     return (
         <section className="scoreboard">
-            <h1>{score}</h1> 
+            <h1 className='title'>Sequence : A Fidget Game</h1>
+            <h2 className='instruction'>Press the displayed arrow key to increase your score</h2>
+            <h2 className='score'>{`Your Score: ${score}`}</h2> 
         </section>
     )
 };

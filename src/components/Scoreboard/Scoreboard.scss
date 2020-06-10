@@ -1,9 +1,38 @@
-.scoreboard {
-    height: 20%;
-    width: 100%;
+@mixin flexCenter() {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+.scoreboard {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
     border-top: 1px solid black;
+}
+
+.title {
+    height: 40%;
+    width: 100%;
+    font-size: 2.3rem;
+    @include flexCenter();
+}
+
+.instruction {
+    height: 60%;
+    width: 60%;
+    font-size: 1.6rem;
+    @include flexCenter();
+}
+
+.score {
+    height: 60%;
+    width: 40%;
+    font-size: 1.6rem;
+    @include flexCenter();
 }
