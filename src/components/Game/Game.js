@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Game.scss';
+import arrow from "../../assets/arrow.svg";
 
 export default class Game extends Component {
     constructor() {
@@ -9,7 +10,12 @@ export default class Game extends Component {
 
     render() {
         return (
-            <section className="Game">
+            <section className="game">
+                <img 
+                    src={arrow}
+                    className="game-arrow" 
+                    alt="Directional arrow"
+                />
             </section>
         )
     };
